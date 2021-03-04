@@ -1,0 +1,23 @@
+---
+title: "rstudio-intern"
+author: "Tavarria Zeigler"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Plotting Base R Airquality Data
+
+```{r}
+library(ggplot2)
+ggplot(airquality) + geom_point(
+    aes(x=Day, y=Ozone, 
+        color=as.factor(Month))) +
+    labs(color="Month", 
+         title = "Scatterplot of Daily Mean Ozone By Month",
+         x="Day of the Month",
+         y="Mean Ozone")
+```
+
